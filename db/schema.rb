@@ -20,17 +20,17 @@ ActiveRecord::Schema.define(version: 2019_07_18_143251) do
   end
 
   create_table "clients", force: :cascade do |t|
-    t.integer "translator_id"
-    t.integer "client_id"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "username"
+    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "username"
-    t.string "password_digest"
+    t.integer "translator_id"
+    t.integer "client_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
